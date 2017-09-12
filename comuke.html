@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿-慕课网官网</title>
+	<link rel="shortcut icon" href="慕课网图片素材/favicon.ico.png" type="image/x-icon">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100%;
+			min-width: 1200px;
+			height: auto;
+			font-family: "微软雅黑";
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="慕课网css&js/仿-慕课网css.css">
+</head>
+<body>
+	<!-- 头部栏目，包括一些logo和导航 -->
+	<div class="head">
+		<div class="head_logo"><a href="http://www.imooc.com/" target="_blank"><img src="慕课网图片素材/logo_new.png" title="慕课网"></a></div>
+		<div class="head_navi">
+			<ul>
+				<li class="navi_item1"><a href="http://www.imooc.com/course/list" target="_blank">课程</a></li>
+				<li class="navi_item2"><a style="width: 110px;" href="http://class.imooc.com/" target="_blank">职业路径</a></li>
+				<li class="navi_item1"><a href="http://coding.imooc.com/" target="_blank">实战</a></li>
+				<li class="navi_item1"><a href="http://www.imooc.com/wenda" target="_blank">猿问</a></li>
+				<li class="navi_item1"><a href="http://www.imooc.com/article" target="_blank" >手记</a></li>
+			</ul>
+		</div>
+		<div class="search">
+			<div class="search_button" id="search_button">
+				<a href="http://class.imooc.com/sc/20" target="_blank">前端入门</a>
+				<a href="http://class.imooc.com/sc/18" target="_blank">Java入门</a>
+			</div>
+			<div class="search_main">
+				<input type="text" id="search_input">
+			</div>
+			<div class="search_icon" id="icon"></div>
+		</div>
+		<div class="head_right">
+			<div class="head_right1">
+				<span id="myself" class="myself_span" onmouseover="myself_block()" onmouseout="myself_none()">个人信息</span>
+				<div class="myself_value" id="myself_value">
+					<span>姓名：廖浩然&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学历：本科</span>
+					<span>出生日期：1991.06.13&nbsp;&nbsp;&nbsp;&nbsp;年龄：26</span>
+					<span>毕业学校：华南农业大学</span>
+					<span>联系方式：18826495310</span>
+					<span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：413391153@qq.com</span>
+					<span>应聘职位：前端工程师</span>
+				</div>
+			</div>
+			<div class="head_right2">
+				<div class="weixin_logo">
+					<img src="慕课网图片素材/weixin.jpg">
+					<div class="qrcode">
+						<div class="qrcode_img"><img src="慕课网图片素材/weixinerweima.jpg" ></div>
+						<div class="qrcode_des">扫描二维码加个微信吧</div>
+					</div>
+				</div>
+				<div class="weixin_name">微信</div>
+			</div>
+			<div class="head_right3">
+				<a href="http://weibo.com/1650937297/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
+					<div class="weibo_logo"><img src="慕课网图片素材/weibo.jpg"></div>
+					<div class="weibo_name">微博</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 中间的导航菜单和图片的轮播 -->
+	<div class="body1">
+		<div class="navigation">
+			<div class="nav_left">
+				<div class="nav_left_in">
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=fe" target="_blank"><div class="white">前端开发</div></a>
+						<div class="hidden1">
+							<h1>分类目录</h1>
+							<div class="hidden1_1">
+								<span>基础：</span><a href="http://www.imooc.com/course/list?c=html" target="_blank">HTML</a><span>/</span><a href="http://www.imooc.com/course/list?c=javascript" target="_blank">JavaScript</a><span>/</span><a href="http://www.imooc.com/course/list?c=jquery" target="_blank">jQuery</a>
+							</div>
+							<div class="hidden1_1">
+								<span>进阶：</span><a href="http://www.imooc.com/course/list?c=html5" target="_blank">HTML5</a><span>/</span><a href="http://www.imooc.com/course/list?c=css3" target="_blank">CSS3</a><span>/</span><a href="http://www.imooc.com/course/list?c=nodejs" target="_blank">Node.js</a><span>/</span><a href="http://www.imooc.com/course/list?c=angularjs" target="_blank">AngularJS</a><span>/</span><a href="http://www.imooc.com/course/list?c=bootstrap" target="_blank">Bootstrap</a><span>/</span><a href="http://www.imooc.com/course/list?c=reactjs" target="_blank">React</a><span>/</span><a href="http://www.imooc.com/course/list?c=sassless" target="_blank">Sass/Less</a><span>/</span><a href="http://www.imooc.com/course/list?c=vuejs" class="veue" target="_blank">Veue.js</a><span>/</span><a href="http://www.imooc.com/course/list?c=webapp" target="_blank">WebApp</a>
+							</div>
+							<div class="hidden1_1">
+								<span>其他：</span><a href="http://www.imooc.com/course/list?c=fetool" target="_blank">前端工具</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_2">
+								<a href="http://class.imooc.com/sc/20" target="_blank" class="hidden1_2_a1">职业路径</a><a href="http://class.imooc.com/sc/20" target="_blank" class="hidden1_2_a2">前端小白入门</a>
+							</div>
+							<div class="hidden1_2">
+								<a href="http://class.imooc.com/sc/25" target="_blank" class="hidden1_2_a1">职业路径</a><a href="http://class.imooc.com/sc/25" target="_blank" class="hidden1_2_a2">前端进阶:响应式开发与常用框架</a>
+							</div>
+							<div class="hidden1_3"><a href="http://coding.imooc.com/class/129.html" target="_blank"><span>实战</span>Augular打造企业级协作平台</a></div>
+							<div class="hidden1_3"><a href="http://coding.imooc.com/class/123.html" target="_blank"><span>实战</span>前端跳槽面试必备技巧</a></div>
+							<div class="hidden1_3"><a href="http://www.imooc.com/learn/134" target="_blank"><span>课程</span>HTML与CSS实现"共嗨世界杯"</a></div>	
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=be" target="_blank"><div class="white">后端开发</div></a>
+						<div class="hidden2">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">PHP</a><span>/</span><a href="">Java</a><span>/</span><a href="">Python</a><span>/</span><a href="">C</a><span>/</span><a href="">C++</a><span>/</span><a href="">Go</a><span>/</span><a href="">C#</a><span>/</span><a href="">Ruby</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_2">
+								<a href="" class="hidden1_2_a1">职业路径</a><a href="" class="hidden1_2_a2">PHP入门：基础语法到实际应用</a>
+							</div>
+							<div class="hidden1_2">
+								<a href="" class="hidden1_2_a1">职业路径</a><a href="" class="hidden1_2_a2">Java零基础入门</a>
+							</div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实战</span>10小时入门大数据</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实战</span>基于Spring Boot技术栈博客系统企业级前后端实践</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>微信授权登陆</a></div>
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=mobile" target="_blank"><div class="white">移动开发</div></a>
+						<div class="hidden3">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">Android</a><span>/</span><a href="">iOS</a><span>/</span><a href="">Unity&nbsp;3D</a><span>/</span><a href="">Cocos2d-x</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_2">
+								<a href="" class="hidden1_2_a1">职业路径</a><a href="" class="hidden1_2_a2">Android：网络与数据储存</a>
+							</div>
+							<div class="hidden1_2">
+								<a href="" class="hidden1_2_a1">职业路径</a><a href="" class="hidden1_2_a2">iOS进阶：Java零基础入门</a>
+							</div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>从零开发安卓节目直播App</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>Android通用框架设计与完整电商App开发</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>CoCo2d-x&nbsp;全民俄罗斯--上</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>2小时搞掂移动直播App开发</a></div>
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=data" target="_blank"><div class="white">数据库</div></a>
+						<div class="hidden4">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">MySQL</a><span>/</span><a href="">MongoDB</a><span>/</span><a href="">Oracle</a><span>/</span><a href="">SQL&nbsp;Server</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>Vue+Node+MongoDB高级全栈</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>Python操作三大主流数据库项目实践</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>性能优化之MySQL优化</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>2015&nbsp;Oracle技术嘉年华</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>MongoDB中文社区北京专场</a></div>
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=cb" target="_blank"><div class="white">云计算&大数据</div></a>
+						<div class="hidden5">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">云计算</a><span>/</span><a href="">大数据</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>10小时入门大数据</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>实战大数据 Spark SQL 慕课网的日志分析</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程轻松愉快之玩转SpringData</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程最新Openstack技术和实战</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程Python-走进Requests库</a></div>
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=op" target="_blank"><div class="white">运维&测试</div></a>
+						<div class="hidden6">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">测试</a><span>/</span><a href="">Linux</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>实战Nginx 从入门到实践</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>实践</span>实战基于Selenium的Web自动化测试</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程自动化测试之selenium工具使用</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程JMeter性能测试入门篇</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程shell编程之变量</a></div>
+						</div>
+					</div>
+					<div class="nav_father">
+						<a href="http://www.imooc.com/course/list?c=photo" target="_blank"><div class="white">UI设计</div></a>
+						<div class="hidden7">
+							<h1>分类目录</h1>
+							<div class="hidden2_1">
+								<a href="">动画特效</a><span>/</span><a href="">AppUI设计</a><span>/</span><a href="">设计工具</a><span>/</span><a href="">设计基础</a>
+							</div>
+							<h1>课程推荐</h1>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>Maya3D建模攻略——葵花宝典</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>UI设计理论入门</a></div>
+							<div class="hidden1_3"><a href="" target="_blank"><span>课程</span>课程Axure入门初体验</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nav_right">
+				<div class="rotation" id="rotation_a">
+					<div id="img_moving">
+						<a href="http://www.imooc.com/act/summertime?mc_marking=0c71f69c3fe38f9377d53bd0ee7ae668&mc_channel=8yfsqhd" target="_blank" class="rotation_1"></a>
+						<a href="http://coding.imooc.com/class/96.html?mc_marking=d7163aeee9a5eab550a14cc2b699c976&mc_channel=banner" target="_blank" class="rotation_2"></a>
+						<a href="http://coding.imooc.com/class/129.html?mc_marking=727cb555820c62461d69070abd056573&mc_channel=banner" target="_blank" class="rotation_3"></a>
+						<a href="http://coding.imooc.com/class/107.html?mc_marking=7a72c833ff9ae725588c7c13fe7d2f96&mc_channel=banner" target="_blank" class="rotation_4"></a>
+						<a href="http://coding.imooc.com/class/109.html?mc_marking=02b8e60903043e419983b80f9c2ecc5a&mc_channel=banner" target="_blank" class="rotation_5"></a>
+					</div>
+					<div class="rotation_pre" id="rota_pre"></div>
+					<div class="rotation_next" id="rota_next"></div>
+					<div class="dots" id="dots_id">
+						<span class="dots_now"></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="right_bottom">
+					<div class="right_bottom_in">
+						<a href="http://class.imooc.com/?c=fe" target="_blank" class="rota_pro">
+							<div class="rota_pro_in">
+								<div class="rota_pro_in_top1"></div>
+								<div>
+									<div class="rota_pro_in_bottom" style="font-size: 14px;color: #000;">Web前端攻城狮</div>
+									<div class="rota_pro_in_bottom" style="font-size: 10px;color: #999;">互联网时代最火爆的技术</div>
+								</div>
+							</div>
+						</a>
+						<a href="http://class.imooc.com/?c=php" target="_blank" class="rota_pro">
+							<div class="rota_pro_in">
+								<div class="rota_pro_in_top2"></div>
+								<div>
+									<div class="rota_pro_in_bottom" style="font-size: 14px;color: #000;">PHP攻城狮</div>
+									<div class="rota_pro_in_bottom" style="font-size: 10px;color: #999;">世界上最好的语言？</div>
+								</div>
+							</div>
+						</a>
+						<a href="http://class.imooc.com/?c=java" target="_blank" class="rota_pro">
+							<div class="rota_pro_in">
+								<div class="rota_pro_in_top3"></div>
+								<div>
+									<div class="rota_pro_in_bottom" style="font-size: 14px;color: #000;">Java攻城狮</div>
+									<div class="rota_pro_in_bottom" style="font-size: 10px;color: #999;">健壮、安全、适用广泛</div>
+								</div>
+							</div>
+						</a>
+						<a href="http://class.imooc.com/?c=android" target="_blank" class="rota_pro">
+							<div class="rota_pro_in">
+								<div class="rota_pro_in_top4"></div>
+								<div>
+									<div class="rota_pro_in_bottom" style="font-size: 14px;color: #000;">Android攻城狮</div>
+									<div class="rota_pro_in_bottom" style="font-size: 10px;color: #999;">移动设备市场份额第一</div>
+								</div>
+							</div>
+						</a>
+						<a href="http://class.imooc.com/?c=ios" target="_blank" class="rota_pro">
+							<div class="rota_pro_in">
+								<div class="rota_pro_in_top5"></div>
+								<div>
+									<div class="rota_pro_in_bottom" style="font-size: 14px;color: #000;">iOS攻城狮</div>
+									<div class="rota_pro_in_bottom" style="font-size: 10px;color: #999;">可能是全球最好用的系统</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 新手入门 -->
+	<div class="body2">
+		<div class="body2_main">
+			<h1 class="body2_main_h">
+				<span class="body2_h_imgeL">&nbsp;</span><span class="body2_main_h_span">新</span>/<span class="body2_main_h_span">手</span>/<span class="body2_main_h_span">入</span>/<span class="body2_main_h_span">门</span><span class="body2_h_imgeR">&nbsp;</span>
+			</h1>
+			<div class="body2_main_foot">
+				<a href="http://www.imooc.com/topic/webqianduan" target="_blank" class="body2_main_foot_1 new_man_image1">
+					<div class="new_man_1">前端开发实现从0到9的学习路径</div>
+					<div class="new_man_2">零基础入门Web前端开发的必备课程</div>
+				</a>
+				<a href="http://www.imooc.com/topic/androidjobs" target="_blank" class="body2_main_foot_1 new_man_image2">
+					<div class="new_man_1">Android基础到高级应用特训营</div>
+					<div class="new_man_2">最全面、最实用、最容易上手的Android晋升课程</div>
+				</a>
+				<div class="body_main_foot_2">
+					<a href="http://class.imooc.com/sc/18?mc_marking=82c3cedd638e1d3fb98cd63709db4448&mc_channel=syb21" target="_blank">
+						<div class="body_main_foot_2_top ten_image1"><span class="little1 little">JAVA攻城狮培养计划</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">Java零基础入门</p>
+							<div class="class_b"><span>职业路径</span><span>3步/27课</span><span>人数:1275</span></div>
+							<div class="class_f">￥299.00</div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://www.imooc.com/learn/855?mc_marking=897df86a0080aa93abc958e588b5f544&mc_channel=syb22" target="_blank">
+						<div class="body_main_foot_2_top ten_image2"><span class="little2 little">HTML/CSS</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">浅谈搜索引擎_SEO</p>
+							<div class="class_b"><span>初级</span><span>人数:9994</span></div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://class.imooc.com/sc/6?mc_marking=7926d4e364260fadf99bc6683bf7488a&mc_channel=syb23" target="_blank">
+						<div class="body_main_foot_2_top ten_image3"><span class="little3 little">Android攻城狮培养计划</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">零基础入门Android语法与界面</p>
+							<div class="class_b"><span>职业路径</span><span>5步/42课</span><span>人数:898</span></div>
+							<div class="class_f" style="color: red;">￥379.00</div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://www.imooc.com/learn/808?mc_marking=0d134d0e581de7b88daa4f49bc6412ad&mc_channel=syb24" target="_blank">
+						<div class="body_main_foot_2_top ten_image4"><span class="little4 little">JavaScript</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">ReactNative基础与入门</p>
+							<div class="class_b"><span>初级</span><span>人数:25364</span></div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://coding.imooc.com/class/115.html?mc_marking=d16700a5362606f3291bafd445ec1bac&mc_channel=syb25" target="_blank">
+						<div class="body_main_foot_2_top ten_image5"><span class="little5 little">Web攻城狮培养计划</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">前端JavaScript面试技巧</p>
+							<div class="class_b"><span>实战</span><span>初级</span><span>人数:816</span></div>
+							<div class="class_f">￥149.00</div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://class.imooc.com/sc/2?mc_marking=7bc8ba653c7861f689001ad9138cab9d&mc_channel=syb26" target="_blank">
+						<div class="body_main_foot_2_top ten_image6"><span class="little6 little">Requirejs自动打包</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">HTML5与CSS3实现动态网页</p>
+							<div class="class_b"><span>职业路径</span><span>5步/29课</span><span>人数:1304</span></div>
+							<div class="class_f" style="color: red;">￥539.00</div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://www.imooc.com/learn/787?mc_marking=d987569bae05fea3de79f34f535aeed4&mc_channel=syb27" target="_blank">
+						<div class="body_main_foot_2_top ten_image7"><span class="little7 little">前端工具</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">Requirejs和自动打包</p>
+							<div class="class_b"><span>中级</span><span>人数:3509</span></div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://class.imooc.com/sc/23?mc_marking=605daf8603c59b1522e51bf12ad7700d&mc_channel=syb28" target="_blank">
+						<div class="body_main_foot_2_top ten_image8"><span class="little8 little">Android攻城狮培养计划</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">Android从界面到数据存储</p>
+							<div class="class_b"><span>职业路径</span><span>6步/40课</span><span>人数:77</span></div>
+							<div class="class_f">￥599.00</div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://www.imooc.com/learn/858?mc_marking=70b0b99116c98b47ddf5c6e59c072a94&mc_channel=syb29" target="_blank">
+						<div class="body_main_foot_2_top ten_image9"><span class="little9 little">JavaScript</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">常用的网页加载进度条</p>
+							<div class="class_b"><span>初级</span><span>人数:10709</span></div>
+						</div>
+					</a>
+				</div>
+				<div class="body_main_foot_2">
+					<a href="http://coding.imooc.com/class/71.html?mc_marking=77da66cd7829b524acf6d1a3106fccf5&mc_channel=syb30" target="_blank">
+						<div class="body_main_foot_2_top ten_image10"><span class="little10 little">SpringBoot</span></div>
+						<div class="body_main_foot_2_bottom">
+							<p class="class_h">C++，java算法与数据结构</p>
+							<div class="class_b"><span>实战</span><span>中级</span><span>人数:2720</span></div>
+							<div class="class_f">￥166.00</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 底部信息 -->
+	<div class="foot">
+		<div class="foot_in">
+			<div class="foot_in_1">
+				<a href="http://www.imooc.com/about/cooperate" target="_blank">企业合作</a>
+				<a href="http://www.imooc.com/about/job" target="_blank">人才招聘</a>
+				<a href="http://www.imooc.com/about/contact" target="_blank">联系我们</a>
+				<a href="http://www.imooc.com/about/recruit" target="_blank">讲师招募</a>
+				<a href="http://www.imooc.com/about/faq" target="_blank">常见问题</a>
+				<a href="http://www.imooc.com/user/feedback" target="_blank">意见反馈</a>
+				<a href="http://daxue.imooc.com/" target="_blank">慕课大学</a>
+				<a href="http://www.imooc.com/about/friendly" target="_blank">友情链接</a>
+			</div>
+			<div class="foot_in_2">
+				<p>©&nbsp;2017&nbsp;imooc.com&nbsp;&nbsp;京ICP备&nbsp;13046642号-2</p>
+			</div>
+			<div class="foot_in_3">
+				制作by@廖浩然_LHR
+			</div>
+		</div>
+	</div>
+
+	<!-- 导入js -->
+	<script src="慕课网css&js/仿-慕课网js.js" type="text/javascript"></script>
+</body>
+</html>
